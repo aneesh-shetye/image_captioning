@@ -1,6 +1,8 @@
-# Experiments for VQA using slot attention
+# Experiments for Image Captioning using slot attention: 
+This is my final year thesis project for improving performance on image captioning. 
+
 ## Current architecture: 
-![slot_exp_1](https://user-images.githubusercontent.com/63205095/171621058-b443f7c3-80ba-4644-812f-4085c024f291.png)
+![ezgif-1-221093d2b5](https://user-images.githubusercontent.com/63205095/218675236-6e42396c-f94d-4dce-aded-e26f1f71da21.gif)
 
 ## Steps to run the code: 
 
@@ -8,11 +10,11 @@
 
 Create an environment: 
 ```
-conda create --name slotvqa
+conda create --name imgcap
 ```
 Activate the environment: 
 ```
-conda activate slotvqa
+conda activate imgcap
 ```
 Install the dependancies: 
 ```
@@ -21,12 +23,23 @@ pip install -r requirements.txt
 
 ### 2. Downloading the data: 
 
-#### GQA: 
-
 Create a directory: `~/datasets/` using: 
 ```
 mkdir ~/datasets/
 ```
+#### Flickr8k: 
+
+*Download the dataset:*
+```
+wget -P ~/datasets/gqa_imgs https://www.kaggle.com/datasets/adityajn105/flickr8k/download?datasetVersionNumber=1
+```
+*Extract the dataset: *
+```
+unzip flickr8k.zip
+```
+
+#### GQA: 
+
 *Downloading GQA Images:*
 
 Create a subdirectory: `~/datasets/gqa_imgs` using: 
@@ -37,6 +50,7 @@ Download GQA imgs:
 ```
 wget -P ~/datasets/gqa_imgs https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip
 ```
+
 Extract the images folder: 
 ```
 unzip images.zip
